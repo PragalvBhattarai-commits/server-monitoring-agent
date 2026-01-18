@@ -12,7 +12,7 @@ public abstract class GenericServer {
         this.ipAddress = ipAddressCounter++;
     }
 
-    abstract void getMetrics();
-    abstract void getHealth();
-    abstract void getStatus();
+    public abstract void getMetrics();
+    public abstract void getHealth();
+    public abstract void getStatus();
 }
