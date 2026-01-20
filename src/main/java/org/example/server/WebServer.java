@@ -1,21 +1,13 @@
 package org.example.server;
 
-public class WebServer extends GenericServer{
-    protected String serverType = "web-server";
-    protected String health = "good";
+public class WebServer extends Server{
+    private final static String health = "good";
     protected String serverStaus;
 
     public WebServer(String status){
         this.serverStaus = status;
+        this.serverType = "Web-server";
     }
-
-    @Override
-    public void getMetrics(){
-        System.out.println("Server Type: " + this.serverType);
-        System.out.println("Server IP Address: " + this.ipAddress);
-        System.out.println("Server ID: " + this.serverId);
-    }
-
     @Override
     public void getHealth(){
         System.out.println("Health: " + this.health);
