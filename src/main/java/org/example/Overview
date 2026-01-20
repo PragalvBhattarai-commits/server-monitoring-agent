@@ -1,0 +1,21 @@
+You are building a server monitoring agent used in a distributed system.
+Different types of servers exist,
+but all servers are monitored in a common way:  Collect metrics  Perform health checks  Report status
+However, how metrics are collected and health is checked depends on the server type.
+
+
+Functional Requirements
+
+Every server must have:
+serverId
+ipAddress
+
+All servers must:
+Collect metrics
+Perform health checks
+Report status
+
+Server types:
+Web Server
+Database Server
+Cache Server
