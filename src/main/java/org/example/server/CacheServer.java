@@ -1,22 +1,14 @@
 package org.example.server;
 
-public class CacheServer extends GenericServer{
+public class CacheServer extends Server{
     protected String ttl;
-    protected String serverType = "data-base-server";
-    protected String health = "good";
+    private final static String health = "good";
     protected String serverStaus;
 
     public CacheServer(String serverStaus, String ttl){
         this.serverStaus = serverStaus;
+        this.serverType = "data-base-server";
         this.ttl = ttl;
-    }
-
-    @Override
-    public void getMetrics() {
-        System.out.println("Server Type: " + this.serverType);
-        System.out.println("Server IP Address: " + this.ipAddress);
-        System.out.println("Server ID: " + this.serverId);
-        System.out.println("TTL: " + this.ttl);
     }
 
     @Override
